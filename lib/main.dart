@@ -4,6 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'Pages/FilePickerScreen.dart';
 import 'Pages/LogInScreen.dart';
+import 'Pages/RangeSelector.dart';
 import 'constants.dart';
 
 Future<void> main() async {
@@ -27,7 +28,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.teal,
       ),
-      home: Constants.prefs?.getBool('loggedIn') == true ? BrowseScreen(): LogInScreen(),
+      home:
+      // RangeSelectorScreen(),
+      Constants.prefs?.getBool('loggedIn') == true ? BrowseScreen(): LogInScreen(),
     );
   }
 }

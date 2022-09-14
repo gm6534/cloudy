@@ -5,6 +5,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 
 import '../constants.dart';
+import 'RangeSelector.dart';
 
 
 
@@ -41,6 +42,12 @@ class _BrowseScreenState extends State<BrowseScreen> {
                 child: Center(
                   child: Text("Drawer Header"),
                 )
+            ),
+            ListTile(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>RangeSelectorScreen()));
+              },
+              title: Text("Date Range"),
             ),
             Spacer(),
             ListTile(
